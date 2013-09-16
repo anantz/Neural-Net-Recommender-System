@@ -12,7 +12,7 @@ pred = 0;
 for j=1:n,
 	pre = 0;
 	den = 0;
-	rated = find(y(:,2)==mov(j,1)) %index of all entries with movie j
+	rated = find(y(:,2)==mov(j,1)); %index of all entries with movie j
 	for i=1:size(rated)(1),
 		user = rated(i,1);
 		pre = pre + sim(uid, y(user,1)) * (y(user,3) - av(y(user,1)));
