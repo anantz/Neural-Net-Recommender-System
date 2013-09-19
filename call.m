@@ -1,4 +1,4 @@
-data = 10000;
+data = 60000;
 
 y = load('u.data');
 y = sortrows(y);
@@ -81,7 +81,11 @@ err = 0;
 for i=1:totalUsers,
 	err = err + error(i);
 end
-err = sqrt(err/r(size(r))(1))
+if(size(r)(1)~=0)
+	err = sqrt(err/r(size(r))(1))
+else
+	err = sqrt(err/size(t)(1))	
+endif
 %m:total entries
 
 
