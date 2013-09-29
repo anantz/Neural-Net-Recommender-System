@@ -1,4 +1,4 @@
-data = 50000;
+data = 1000;
 %%loading datasets
 load('train.txt');
 totalUsers = y(data,1); %gettin no. of users in dataset

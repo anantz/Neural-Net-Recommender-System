@@ -1,7 +1,7 @@
 function [Theta] = optimize(uid)
 
 input_layer_size  = 19;  % 20x20 Input Images of Digits
-hidden_layer_size = 10;   % 25 hidden units
+hidden_layer_size = 8;   % 25 hidden units
 num_labels = 5;          % 10 labels, from 1 to 10   
                           % (note that we have mapped "0" to label 10)
 
