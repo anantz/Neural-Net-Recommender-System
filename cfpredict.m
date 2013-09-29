@@ -15,6 +15,8 @@ for j=1:n,
 	rated = find(y(:,2)==mov(j,1)); %index of all entries with movie j
 	for i=1:size(rated)(1),
 		user = rated(i,1);
+		sim(uid, y(user,1));
+
 		pre = pre + sim(uid, y(user,1)) * (y(user,3) - av(y(user,1)));
 		den = den + abs(sim(uid,y(user,1)));
 	end
@@ -22,8 +24,14 @@ for j=1:n,
 	if (den ~= 0)	
 		if (pred == 0)
 				pred = [uid mov(j,1) round(av(uid)+(pre/den))];
+			%%	if(size(pred)(2)==1)
+			%%		pred
+			%%	endif
 		else
 				pred = [pred;uid mov(j,1) round(av(uid)+(pre/den))];
+			%%if(size(pred)(2)==1)
+			%%		pred
+			%%	endif
 		endif
 	endif
 
