@@ -1,4 +1,3 @@
 Neural-Net-Recommender-System
 ==============================
- Description of the files:
- 
+ Download the Movie Lens dataset from the GroupLens webstite and run call.m 
